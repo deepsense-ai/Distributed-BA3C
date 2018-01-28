@@ -14,13 +14,15 @@ It's prepared to run on large CPU clusters with [Slurm](https://slurm.schedmd.co
 * In our experiments we've used [Tensorflow with MKL](https://software.intel.com/en-us/articles/intel-optimized-tensorflow-wheel-now-available). Our code should work with usual TensorFlow 1.2, but we neither tested nor have any benchmarks for it.
 
 # Install
-1. `git clone <this repo address>`
-2. Install Python packages : `pip install -r requirements.txt`
-3. In [distributed_tensorpack_mkl.sh:38](src/distributed_tensorpack_mkl.sh) set this paths:  
-        * EXPERIMENTS_DIR - directory where experiments will be saved  
-        * VIRTUAL_ENV - path to virtualenv you will be using  
-        * DISTRIBUTED_A3C_PATH - path to this repo  
-        * TENSORPACK_PIPEDIR - path to directory for storing sockets which are used for interprocess communication  
+1. `git clone https://github.com/deepsense-ai/Distributed-BA3C.git`
+2. Create virtualenv: `virtualenv a3c_virtualenv`
+3. Activate virtualenv: `source a3c_virtualenv/bin/activate`
+4. Install Python packages: `pip install -r Distributed-BA3C/requirements.txt`
+5. In [`distributed_tensorpack_mkl.sh:38`](src/distributed_tensorpack_mkl.sh) set this paths:  
+* EXPERIMENTS_DIR - directory where experiments will be saved, e.g. `mkdir experiments`  
+* VIRTUAL_ENV - path to `a3c_virtualenv` you will be using
+* DISTRIBUTED_A3C_PATH - path to `Distributed-BA3C` (this repo)
+* TENSORPACK_PIPEDIR - path to a directory for storing sockets which are used for interprocess communication, e.g. `mkdir tmp_sockets`
 
 # To train agent on Atari game:
 Minimal command to start training:
