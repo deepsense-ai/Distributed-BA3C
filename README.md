@@ -18,7 +18,7 @@ It's prepared to run on large CPU clusters with [Slurm](https://slurm.schedmd.co
 2. Create virtualenv: `virtualenv a3c_virtualenv`
 3. Activate virtualenv: `source a3c_virtualenv/bin/activate`
 4. Install Python packages: `pip install -r Distributed-BA3C/requirements.txt`
-5. In [`distributed_tensorpack_mkl.sh:38`](src/distributed_tensorpack_mkl.sh) set this paths:  
+5. In [`distributed_tensorpack_mkl.sh:38`](src/distributed_tensorpack_mkl.sh) set these paths:  
 * EXPERIMENTS_DIR - directory where experiments will be saved, e.g. `mkdir experiments`  
 * VIRTUAL_ENV - path to `a3c_virtualenv` you will be using
 * DISTRIBUTED_A3C_PATH - path to `Distributed-BA3C` (this repo)
