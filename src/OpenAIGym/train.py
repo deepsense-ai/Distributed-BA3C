@@ -272,12 +272,6 @@ class Model(ModelDesc):
                 return policy, value
 
     def _build_graph(self, inputs):
-        # import ipdb; ipdb.set_trace()
-        eprint('===== [{}] PRINTING BUILD GRAPH STACK AT {}=============='.format(socket.gethostname(),
-                                                                                  time.time()))
-        traceback.print_stack(file=sys.stderr)
-
-
         with tf.device('/cpu:0'):
             with tf.variable_scope(tf.get_variable_scope(), reuse=None):
                 state, action, futurereward, global_step_from_predict, init_R, isOver = inputs
