@@ -1,5 +1,11 @@
 import argparse
 
+
+# https://stackoverflow.com/questions/15008758/parsing-boolean-values-with-argparse
+def string_to_bool(string):
+    return string.lower() == 'true'
+
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--gpu", required=False, type=str)
@@ -47,18 +53,18 @@ def parse_args():
     parser.add_argument("--ps", required=True, type=int)
     parser.add_argument("--fc_init", required=True, type=str)
     parser.add_argument("--conv_init", required=True, type=str)
-    parser.add_argument("--replace_with_conv", required=False, type=bool, default=True)
+    parser.add_argument("--replace_with_conv", required=False, type=string_to_bool, default=True)
     parser.add_argument("--fc_splits", required=False, type=int, default=1)
-    parser.add_argument("--debug_charts", required=True, type=bool)
+    parser.add_argument("--debug_charts", required=True, type=string_to_bool)
     parser.add_argument("--epsilon", required=True, type=float, default=1e-8)
     parser.add_argument("--beta1", required=True, type=float, default=0.9)
     parser.add_argument("--beta2", required=True, type=float, default=0.999)
     parser.add_argument("--save_every", required=True, type=int)
     parser.add_argument("--models_dir", required=True, type=str)
     parser.add_argument("--experiment_dir", required=True, type=str)
-    parser.add_argument("--adam_debug", required=True, type=bool)
-    parser.add_argument("--eval_node", required=True, type=bool)
-    parser.add_argument("--record_node", required=True, type=bool)
-    parser.add_argument("--schedule_hyper", required=True, type=bool)
+    parser.add_argument("--adam_debug", required=True, type=string_to_bool)
+    parser.add_argument("--eval_node", required=True, type=string_to_bool)
+    parser.add_argument("--record_node", required=True, type=string_to_bool)
+    parser.add_argument("--schedule_hyper", required=True, type=string_to_bool)
 
     return parser.parse_args()
