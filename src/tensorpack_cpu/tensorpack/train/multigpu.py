@@ -320,7 +320,7 @@ class AsyncMultiGPUTrainer(MultiGPUTrainer):
              step_time=round(elapsed_time, 2),
              mean_step_time=round(mean_step_time,2),
              it_s=round(1000.0 / mean_step_time, 2)))
-        logger.error(s)
+        logger.info(s)
         self.main_thread_timer = start_timer()
 
     def _trigger_epoch(self):
