@@ -332,6 +332,6 @@ class AsyncMultiGPUTrainer(MultiGPUTrainer):
                 '[0-9]+', self.async_step_counter.__str__())[0])
             self.write_scalar_summary(
                     'async_global_step', async_step_total_cnt)
-        except:
-            pass
+        except Exception as e:
+            logger.exception(e)
         super(AsyncMultiGPUTrainer, self)._trigger_epoch()
