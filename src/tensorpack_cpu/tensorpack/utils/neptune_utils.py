@@ -46,10 +46,10 @@ class ChannelWrapper(object):
             self.fd.write(header)
             self.fd.flush()
 
-    def send(self, x, y, *args, **kwargs):
-        print "##### Sending to neptune: ", self.name,": ", x,",", y, "#####"
+    def send(self, hour, stat, *args, **kwargs):
+        print "Saving to %s.csv: %s, %s" % (self.name, hour, stat)
         if self.to_file:
-            self._send_to_file(x,y)
+            self._send_to_file(hour, stat)
 
     def _send_to_file(self, x, y):
         line = '{},{}\n'.format(x, y)

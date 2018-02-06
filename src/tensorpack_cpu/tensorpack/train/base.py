@@ -102,9 +102,7 @@ class Trainer(object):
         self.summary_writer.add_summary(summary, self.global_step)
 
     def write_scalar_summary(self, name, val):
-        self.summary_writer.add_summary(
-                create_summary(name, val),
-                get_global_step())
+        self.summary_writer.add_summary(create_summary(name, val))
         self.stat_holder.add_stat(name, val)
 
     def main_loop(self):

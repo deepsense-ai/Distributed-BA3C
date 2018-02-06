@@ -400,6 +400,7 @@ class MySimulatorMaster(SimulatorMaster, Callback):
         self.stats[ident].reset()
 
         if self.games.count == 10:
+            self.trainer.write_scalar_summary('online', self.games.average)
             self.neptune_client.send((self.worker_id, ('online', self.games.average)))
             self.games.reset()
 
@@ -536,7 +537,6 @@ def get_config(args=None, is_chief=True, task_index=0, chief_worker_hostname="",
     with tf.device(device_function):
         with tf.variable_scope(tf.get_variable_scope(), reuse=None):
             lr = tf.Variable(args.learning_rate, trainable=False, name='learning_rate')
-    tf.summary.scalar('learning_rate', lr)
 
     intra_op_par = args.intra_op_par
     inter_op_par = args.inter_op_par
