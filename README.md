@@ -1,5 +1,5 @@
 # Distributed A3C algorithm for playing Atari games
-This repo contains the code for our work on the distributed training of RL agents for playing atari games. For further details please visit [Solving Atari games with Distributed Reinforcement Learning](https://blog.deepsense.ai/solving-atari-games-with-distributed-reinforcement-learning/).
+This repo contains the code for our work on the distributed training of RL agents for playing atari games. For further details please read our paper on the subject: https://arxiv.org/abs/1801.02852 or visit our blog [Solving Atari games with Distributed Reinforcement Learning](https://blog.deepsense.ai/solving-atari-games-with-distributed-reinforcement-learning/).
 It's a distributed version of the A3C algorithm in [Asynchronous Methods for Deep Reinforcement Learning](http://arxiv.org/abs/1602.01783).  
 We based our implementation on [Tensorpack version of A3C](https://github.com/ppwwyyxx/tensorpack/tree/master/examples/A3C-Gym).  
 It's prepared to run on large CPU clusters with [Slurm](https://slurm.schedmd.com/) manager (it was tested on up to 1500 cores)
