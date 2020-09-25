@@ -73,7 +73,7 @@ simplegeneric==0.8.1
 singledispatch==3.4.0.3
 six==1.10.0
 subprocess32==3.2.7
-tensorflow==1.2.1
+tensorflow==1.15.4
 termcolor==1.1.0
 terminado==0.6
 terminaltables==2.1.0
