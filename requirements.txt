@@ -63,7 +63,7 @@ PyOpenGL==3.1.0
 pyparsing==2.1.10
 python-dateutil==2.4.2
 pytz==2016.10
-PyYAML==3.11
+PyYAML==5.4
 pyzmq==16.0.2
 qtconsole==4.2.1
 requests==2.11.1
