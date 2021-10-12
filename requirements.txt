@@ -44,7 +44,7 @@ nltk==3.2.2
 notebook==4.4.1
 numpy==1.12.0
 olefile==0.43
-opencv-python==3.2.0.6
+opencv-python==3.3.1.11
 packaging==16.8
 pandocfilters==1.4.1
 pathlib2==2.2.1
