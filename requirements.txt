@@ -33,7 +33,7 @@ kitchen==1.2.4
 lmdb==0.92
 MarkupSafe==0.23
 matplotlib==1.5.3
-mistune==0.7.3
+mistune==2.0.3
 mock==2.0.0
 more-itertools==2.2
 msgpack-numpy==0.3.7
