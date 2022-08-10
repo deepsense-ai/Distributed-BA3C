@@ -38,7 +38,7 @@ mock==2.0.0
 more-itertools==2.2
 msgpack-numpy==0.3.7
 msgpack-python==0.4.8
-nbconvert==5.1.1
+nbconvert==6.3.0
 nbformat==4.3.0
 nltk==3.2.2
 notebook==4.4.1
